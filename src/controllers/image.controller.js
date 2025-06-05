@@ -1,5 +1,5 @@
-import { uploadImage } from "../services/image.service.js"
 import path from "path";
+import { getImageByName, uploadImage } from "../services/image.service.js";
 
 const imageUploadController = async (req, res) => {
     const result = await uploadImage(req);
@@ -16,4 +16,4 @@ const downloadController = async (req, res) => {
     }
 }
 
-export { imageUploadController, downloadController };
+export { downloadController, imageUploadController };

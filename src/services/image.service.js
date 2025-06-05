@@ -39,7 +39,7 @@ export const uploadImage = async (req) => {
 
 export const getImageByName = async (req) => {
     try {
-        const { name } = req.body;
+        const { name } = req.params;
 
         const imageRecord = await Image.findOne({ name });
 

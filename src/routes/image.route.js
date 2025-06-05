@@ -15,7 +15,7 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
-router.post("/upload", upload.single("image"), imageUploadController);
-router.get("/image", downloadController);
+router.post("/upload-image", upload.single("image"), imageUploadController);
+router.get("/get-image/:name", downloadController);
 
 export default router;
